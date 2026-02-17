@@ -1,0 +1,17 @@
+{
+  "FolderOrderSettings":[
+    {"name":"Objects","order":2,"path":"folders/Objects.yy",},
+    {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"oCoin","order":2,"path":"objects/oCoin/oCoin.yy",},
+    {"name":"oFloor","order":1,"path":"objects/oFloor/oFloor.yy",},
+    {"name":"oKnife","order":3,"path":"objects/oKnife/oKnife.yy",},
+    {"name":"Room2","order":3,"path":"rooms/Room2/Room2.yy",},
+    {"name":"sBackground","order":3,"path":"sprites/sBackground/sBackground.yy",},
+    {"name":"sCoin","order":1,"path":"sprites/sCoin/sCoin.yy",},
+    {"name":"sFloor2","order":5,"path":"sprites/sFloor2/sFloor2.yy",},
+    {"name":"sKnife","order":2,"path":"sprites/sKnife/sKnife.yy",},
+    {"name":"sPlayer","order":4,"path":"sprites/sPlayer/sPlayer.yy",},
+  ],
+}

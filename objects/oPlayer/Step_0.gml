@@ -2,24 +2,24 @@
 ysp=0
 xsp=0
 
-if keyboard_check(vk_down)
+if (keyboard_check(ord("S")))
+{
+    ysp = 3;
+}
 
+if (keyboard_check(ord("W")))
 {
-	ysp=+1
+    ysp = -3;
 }
-if keyboard_check(vk_up)
+
+if (keyboard_check(ord("A")))
 {
-	ysp=-1
+    xsp = -3;
 }
-if keyboard_check(vk_left)
+
+if (keyboard_check(ord("D")))
 {
-	xsp=-1
-	
-}
-if keyboard_check(vk_right)
-{
-	xsp=+1
-	
+    xsp = 3;
 }
 // floor collision
 

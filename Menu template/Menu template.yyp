@@ -36,14 +36,18 @@
   "resources":[
     {"id":{"name":"fnt_monogram","path":"fonts/fnt_monogram/fnt_monogram.yy",},},
     {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"r_game","path":"rooms/r_game/r_game.yy",},},
+    {"id":{"name":"r1","path":"rooms/r1/r1.yy",},},
     {"id":{"name":"s_background","path":"sprites/s_background/s_background.yy",},},
     {"id":{"name":"s_cursor","path":"sprites/s_cursor/s_cursor.yy",},},
+    {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"r_game","path":"rooms/r_game/r_game.yy",},},
+    {"roomId":{"name":"r1","path":"rooms/r1/r1.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

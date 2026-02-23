@@ -23,9 +23,9 @@ if(keyboard_check_pressed(confirmButt))
 {
 	if(selected == 0) // Play by default
 	{
-		// Whatever happens when you play
+		room_goto_next()
 	}
-	
+else
 	if(selected == 1) // Options by default
 	{
 		// Go to options room

@@ -1,18 +1,25 @@
 {
   "FolderOrderSettings":[
+    {"name":"Fonts","order":4,"path":"folders/Fonts.yy",},
     {"name":"Objects","order":2,"path":"folders/Objects.yy",},
+    {"name":"Rooms","order":5,"path":"folders/Rooms.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"o_menu","order":5,"path":"objects/o_menu/o_menu.yy",},
     {"name":"oCoin","order":2,"path":"objects/oCoin/oCoin.yy",},
     {"name":"oFloor","order":1,"path":"objects/oFloor/oFloor.yy",},
     {"name":"oFloor2","order":4,"path":"objects/oFloor2/oFloor2.yy",},
     {"name":"oKnife","order":3,"path":"objects/oKnife/oKnife.yy",},
-    {"name":"Room2","order":3,"path":"rooms/Room2/Room2.yy",},
-    {"name":"sBackground","order":3,"path":"sprites/sBackground/sBackground.yy",},
+    {"name":"Room1","order":1,"path":"rooms/Room1/Room1.yy",},
+    {"name":"Room2","order":2,"path":"rooms/Room2/Room2.yy",},
+    {"name":"s_background","order":9,"path":"sprites/s_background/s_background.yy",},
+    {"name":"s_cursor","order":8,"path":"sprites/s_cursor/s_cursor.yy",},
+    {"name":"sBckgroundTwo","order":3,"path":"sprites/sBckgroundTwo/sBckgroundTwo.yy",},
     {"name":"sCoin","order":1,"path":"sprites/sCoin/sCoin.yy",},
     {"name":"sFloor2","order":5,"path":"sprites/sFloor2/sFloor2.yy",},
     {"name":"sKnife","order":2,"path":"sprites/sKnife/sKnife.yy",},
-    {"name":"sPlayer","order":4,"path":"sprites/sPlayer/sPlayer.yy",},
+    {"name":"sPlayer_Forward","order":4,"path":"sprites/sPlayer_Forward/sPlayer_Forward.yy",},
+    {"name":"sRoomOne","order":10,"path":"sprites/sRoomOne/sRoomOne.yy",},
   ],
 }

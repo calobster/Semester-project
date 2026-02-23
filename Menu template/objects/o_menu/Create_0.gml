@@ -47,10 +47,10 @@ titleSize = 2;
 
 
 // Button to move up the menu
-upButt = vk_up;
+upButt = ord("W");
 
 // Button to move down the menu
-downButt = vk_down;
+downButt = ord("S");
 
 // Button to confirm menu choice
-confirmButt = vk_space;
+confirmButt = vk_enter;

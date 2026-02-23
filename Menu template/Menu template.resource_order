@@ -15,6 +15,9 @@
     {"name":"Timelines","order":9,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
+    {"name":"r1","order":1,"path":"rooms/r1/r1.yy",},
     {"name":"s_background","order":1,"path":"sprites/s_background/s_background.yy",},
+    {"name":"Sprite3","order":2,"path":"sprites/Sprite3/Sprite3.yy",},
   ],
 }

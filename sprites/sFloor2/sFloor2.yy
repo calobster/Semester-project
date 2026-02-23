@@ -1,11 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sFloor2",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":40,
   "bbox_left":0,
   "bbox_right":63,
-  "bbox_top":38,
+  "bbox_top":35,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,

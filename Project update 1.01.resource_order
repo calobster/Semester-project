@@ -6,6 +6,7 @@
   "ResourceOrderSettings":[
     {"name":"oCoin","order":2,"path":"objects/oCoin/oCoin.yy",},
     {"name":"oFloor","order":1,"path":"objects/oFloor/oFloor.yy",},
+    {"name":"oFloor2","order":4,"path":"objects/oFloor2/oFloor2.yy",},
     {"name":"oKnife","order":3,"path":"objects/oKnife/oKnife.yy",},
     {"name":"Room2","order":3,"path":"rooms/Room2/Room2.yy",},
     {"name":"sBackground","order":3,"path":"sprites/sBackground/sBackground.yy",},

@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"Project update 1.00",
+  "%Name":"Project update 1.01",
   "AudioGroups":[
     {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -20,10 +20,11 @@
   "MetaData":{
     "IDEVersion":"2024.14.3.217",
   },
-  "name":"Project update 1.00",
+  "name":"Project update 1.01",
   "resources":[
     {"id":{"name":"oCoin","path":"objects/oCoin/oCoin.yy",},},
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
+    {"id":{"name":"oFloor2","path":"objects/oFloor2/oFloor2.yy",},},
     {"id":{"name":"oKnife","path":"objects/oKnife/oKnife.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

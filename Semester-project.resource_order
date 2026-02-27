@@ -8,8 +8,8 @@
   "ResourceOrderSettings":[
     {"name":"o_menu","order":5,"path":"objects/o_menu/o_menu.yy",},
     {"name":"oCoin","order":2,"path":"objects/oCoin/oCoin.yy",},
+    {"name":"oEnemy_Parent","order":6,"path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},
     {"name":"oFloor","order":1,"path":"objects/oFloor/oFloor.yy",},
-    {"name":"oFloor2","order":4,"path":"objects/oFloor2/oFloor2.yy",},
     {"name":"oKnife","order":3,"path":"objects/oKnife/oKnife.yy",},
     {"name":"Room1","order":1,"path":"rooms/Room1/Room1.yy",},
     {"name":"Room2","order":2,"path":"rooms/Room2/Room2.yy",},
@@ -20,6 +20,8 @@
     {"name":"sFloor2","order":5,"path":"sprites/sFloor2/sFloor2.yy",},
     {"name":"sKnife","order":2,"path":"sprites/sKnife/sKnife.yy",},
     {"name":"sPlayer_Forward","order":4,"path":"sprites/sPlayer_Forward/sPlayer_Forward.yy",},
+    {"name":"spr_tileset","order":11,"path":"sprites/spr_tileset/spr_tileset.yy",},
     {"name":"sRoomOne","order":10,"path":"sprites/sRoomOne/sRoomOne.yy",},
+    {"name":"TileSet1","order":6,"path":"tilesets/TileSet1/TileSet1.yy",},
   ],
 }

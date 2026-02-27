@@ -21,27 +21,8 @@ if (keyboard_check(ord("D")))
 {
     xsp = 3;
 }
-// floor collision
-
-if place_meeting(x,y,oFloor2)
-{
-	ysp=0
-	if keyboard_check(vk_up)
-	{
-		ysp=-2
-	}
-}
-
-if place_meeting(x,y+1,oFloor)
-{
-	ysp=0
-	if keyboard_check(vk_up)
-	{
-		ysp=-2
-	}
-}
-
-move_and_collide(xsp,ysp,oFloor)
+x += xsp;
+y += ysp;
 
 //DeATH AND PROGRESS
 if place_meeting(x,y,oCoin)

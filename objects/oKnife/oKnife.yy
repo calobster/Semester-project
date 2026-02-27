@@ -4,12 +4,20 @@
   "eventList":[],
   "managed":true,
   "name":"oKnife",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"damage","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"distance_to_player","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"80",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"move_speed","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"hp","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+  ],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oEnemy_Parent",
+    "path":"objects/oEnemy_Parent/oEnemy_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

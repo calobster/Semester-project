@@ -19,7 +19,7 @@
     {"name":"sCoin","order":1,"path":"sprites/sCoin/sCoin.yy",},
     {"name":"sFloor2","order":5,"path":"sprites/sFloor2/sFloor2.yy",},
     {"name":"sKnife","order":2,"path":"sprites/sKnife/sKnife.yy",},
-    {"name":"sPlayer_Backeard","order":12,"path":"sprites/sPlayer_Backeard/sPlayer_Backeard.yy",},
+    {"name":"sPlayer_Backward","order":12,"path":"sprites/sPlayer_Backward/sPlayer_Backward.yy",},
     {"name":"sPlayer_Forward","order":4,"path":"sprites/sPlayer_Forward/sPlayer_Forward.yy",},
     {"name":"spr_tileset","order":11,"path":"sprites/spr_tileset/spr_tileset.yy",},
     {"name":"sRoomOne","order":10,"path":"sprites/sRoomOne/sRoomOne.yy",},

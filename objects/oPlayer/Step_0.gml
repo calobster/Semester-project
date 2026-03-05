@@ -24,6 +24,21 @@ if (keyboard_check(ord("D")))
 x += xsp;
 y += ysp;
 
+//Sprite change
+var move = 0;
+
+if (keyboard_check(ord("A"))) {
+    move = -1;
+    sprite_index = sPlayer_Backward;
+}
+
+if (keyboard_check(ord("D"))) {
+    move = 1;
+    sprite_index = sPlayer_Forward;
+}
+
+x += move * 4; // movement speed
+
 //DeATH AND PROGRESS
 if place_meeting(x,y,oCoin)
 {

@@ -41,7 +41,7 @@
     {"id":{"name":"sFloor","path":"sprites/sFloor/sFloor.yy",},},
     {"id":{"name":"sFloor2","path":"sprites/sFloor2/sFloor2.yy",},},
     {"id":{"name":"sKnife","path":"sprites/sKnife/sKnife.yy",},},
-    {"id":{"name":"sPlayer_Backeard","path":"sprites/sPlayer_Backeard/sPlayer_Backeard.yy",},},
+    {"id":{"name":"sPlayer_Backward","path":"sprites/sPlayer_Backward/sPlayer_Backward.yy",},},
     {"id":{"name":"sPlayer_Forward","path":"sprites/sPlayer_Forward/sPlayer_Forward.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
     {"id":{"name":"sRoomOne","path":"sprites/sRoomOne/sRoomOne.yy",},},

@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Project update 1.01",
-    "path":"Project update 1.01.yyp",
+    "name":"Semester-project",
+    "path":"Semester-project.yyp",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

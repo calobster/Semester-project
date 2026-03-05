@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"Semester-project",
+  "%Name":"Project update 1.01",
   "AudioGroups":[
     {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -22,7 +22,7 @@
   "MetaData":{
     "IDEVersion":"2024.14.3.217",
   },
-  "name":"Semester-project",
+  "name":"Project update 1.01",
   "resources":[
     {"id":{"name":"fnt_monogram","path":"fonts/fnt_monogram/fnt_monogram.yy",},},
     {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},},

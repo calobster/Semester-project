@@ -1,14 +1,14 @@
 {
   "$GMRoom":"v1",
-  "%Name":"Room2",
+  "%Name":"rGame2",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_471D0529","path":"rooms/Room2/Room2.yy",},
-    {"name":"inst_48A52571","path":"rooms/Room2/Room2.yy",},
-    {"name":"inst_44D16AE2","path":"rooms/Room2/Room2.yy",},
+    {"name":"inst_471D0529","path":"rooms/rGame2/rGame2.yy",},
+    {"name":"inst_48A52571","path":"rooms/rGame2/rGame2.yy",},
+    {"name":"inst_44D16AE2","path":"rooms/rGame2/rGame2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -19,7 +19,7 @@
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"sBckgroundTwo","path":"sprites/sBckgroundTwo/sBckgroundTwo.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
-  "name":"Room2",
+  "name":"rGame2",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",

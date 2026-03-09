@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oPlayer",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oSelect2",
+  "eventList":[],
   "managed":true,
-  "name":"oPlayer",
+  "name":"oSelect2",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -29,11 +26,8 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
-  "spriteId":{
-    "name":"sPlayer_Forward",
-    "path":"sprites/sPlayer_Forward/sPlayer_Forward.yy",
-  },
+  "solid":false,
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

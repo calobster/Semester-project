@@ -28,12 +28,12 @@ if(keyboard_check_pressed(confirmButt))
 else
 	if(selected == 1) // Options by default
 	{
-		// Go to options room
+		room_goto(rOptions)
 	}
 	
 	if(selected == 2) // Stats by default
 	{
-		// Go to stats room
+		room_goto(rMenu)
 	}
 	
 	if(selected == 3) // Exit by default

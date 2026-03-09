@@ -1,14 +1,14 @@
 {
   "$GMRoom":"v1",
-  "%Name":"Room1",
+  "%Name":"rGame1",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_59412286","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_3540AEC","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_48EF7B9D","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_59412286","path":"rooms/rGame1/rGame1.yy",},
+    {"name":"inst_3540AEC","path":"rooms/rGame1/rGame1.yy",},
+    {"name":"inst_48EF7B9D","path":"rooms/rGame1/rGame1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -19,7 +19,7 @@
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_Background","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_Background","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":68,"SerialiseWidth":120,"TileCompressedData":[-8160,10,],"TileDataFormat":1,},"tilesetId":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
-  "name":"Room1",
+  "name":"rGame1",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",

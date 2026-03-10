@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sKnife",
-    "path":"sprites/sKnife/sKnife.yy",
+    "name":"sSquid_Forward",
+    "path":"sprites/sSquid_Forward/sSquid_Forward.yy",
   },
   "spriteMaskId":null,
   "visible":true,

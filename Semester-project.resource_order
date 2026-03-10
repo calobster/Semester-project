@@ -20,11 +20,12 @@
     {"name":"sBckgroundTwo","order":3,"path":"sprites/sBckgroundTwo/sBckgroundTwo.yy",},
     {"name":"sCoin","order":1,"path":"sprites/sCoin/sCoin.yy",},
     {"name":"sFloor2","order":5,"path":"sprites/sFloor2/sFloor2.yy",},
-    {"name":"sKnife","order":2,"path":"sprites/sKnife/sKnife.yy",},
     {"name":"sPlayer_Backward","order":12,"path":"sprites/sPlayer_Backward/sPlayer_Backward.yy",},
     {"name":"sPlayer_Forward","order":4,"path":"sprites/sPlayer_Forward/sPlayer_Forward.yy",},
     {"name":"spr_tileset","order":11,"path":"sprites/spr_tileset/spr_tileset.yy",},
     {"name":"sRoomOne","order":10,"path":"sprites/sRoomOne/sRoomOne.yy",},
+    {"name":"sSquid_Backward","order":13,"path":"sprites/sSquid_Backward/sSquid_Backward.yy",},
+    {"name":"sSquid_Forward","order":2,"path":"sprites/sSquid_Forward/sSquid_Forward.yy",},
     {"name":"TileSet1","order":6,"path":"tilesets/TileSet1/TileSet1.yy",},
   ],
 }

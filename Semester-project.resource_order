@@ -12,6 +12,7 @@
     {"name":"oFloor","order":1,"path":"objects/oFloor/oFloor.yy",},
     {"name":"oKnife","order":3,"path":"objects/oKnife/oKnife.yy",},
     {"name":"oOptions","order":7,"path":"objects/oOptions/oOptions.yy",},
+    {"name":"oPause","order":8,"path":"objects/oPause/oPause.yy",},
     {"name":"rGame1","order":1,"path":"rooms/rGame1/rGame1.yy",},
     {"name":"rGame2","order":2,"path":"rooms/rGame2/rGame2.yy",},
     {"name":"rOptions","order":3,"path":"rooms/rOptions/rOptions.yy",},

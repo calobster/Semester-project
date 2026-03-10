@@ -31,7 +31,6 @@
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
     {"id":{"name":"oKnife","path":"objects/oKnife/oKnife.yy",},},
     {"id":{"name":"oOptions","path":"objects/oOptions/oOptions.yy",},},
-    {"id":{"name":"oPause","path":"objects/oPause/oPause.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"rGame1","path":"rooms/rGame1/rGame1.yy",},},
     {"id":{"name":"rGame2","path":"rooms/rGame2/rGame2.yy",},},

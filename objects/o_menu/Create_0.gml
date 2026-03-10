@@ -40,10 +40,10 @@ titleCol = c_blue;
 
 
 // Title of your game
-gameTitle = "Fish Game";
+gameTitle = "A Very Fishy Game";
 
 // Size of the title
-titleSize = 2;
+titleSize = 1.5;
 
 
 // Button to move up the menu

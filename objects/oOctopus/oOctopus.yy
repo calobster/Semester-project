@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oKnife",
+  "%Name":"oOctopus",
   "eventList":[],
   "managed":true,
-  "name":"oKnife",
+  "name":"oOctopus",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"damage","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"distance_to_player","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"80",},

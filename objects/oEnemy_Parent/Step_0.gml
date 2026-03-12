@@ -1,3 +1,7 @@
+if (instance_exists(oPause) && oPause.paused) {
+    exit;
+}
+
 // Check distance every frame
 if (instance_exists(oPlayer) && distance_to_object(oPlayer) < distance_to_player)
 {

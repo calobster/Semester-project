@@ -1,3 +1,6 @@
+if (instance_exists(oPause) && oPause.paused) {
+    exit;
+}
 
 ysp=0
 xsp=0

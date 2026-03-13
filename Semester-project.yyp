@@ -50,6 +50,7 @@
     {"id":{"name":"sPlayer_Forward","path":"sprites/sPlayer_Forward/sPlayer_Forward.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
     {"id":{"name":"sSquid_Forward","path":"sprites/sSquid_Forward/sSquid_Forward.yy",},},
+    {"id":{"name":"sWater","path":"sprites/sWater/sWater.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
     {"id":{"name":"TileSet2","path":"tilesets/TileSet2/TileSet2.yy",},},
   ],

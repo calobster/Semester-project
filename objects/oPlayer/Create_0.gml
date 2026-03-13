@@ -7,3 +7,6 @@ max_hp = 10
 hp = max_hp
 
 damage_flash = 0
+fall_speed = 0;
+max_fall = 6;
+gravity_strength = 0.15;

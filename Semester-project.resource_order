@@ -28,6 +28,7 @@
     {"name":"sPlayer_Forward","order":4,"path":"sprites/sPlayer_Forward/sPlayer_Forward.yy",},
     {"name":"spr_tileset","order":11,"path":"sprites/spr_tileset/spr_tileset.yy",},
     {"name":"sSquid_Forward","order":2,"path":"sprites/sSquid_Forward/sSquid_Forward.yy",},
+    {"name":"sWater","order":16,"path":"sprites/sWater/sWater.yy",},
     {"name":"TileSet1","order":6,"path":"tilesets/TileSet1/TileSet1.yy",},
     {"name":"TileSet2","order":7,"path":"tilesets/TileSet2/TileSet2.yy",},
   ],

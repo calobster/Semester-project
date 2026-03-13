@@ -11,6 +11,20 @@ var _v = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 xsp = _h * 3;
 ysp = _v * 3;
 
+// gravity when outside water
+var in_water = place_meeting(x, y, oWater);
+
+if (!in_water)
+{
+    fall_speed += gravity_strength;
+    fall_speed = clamp(fall_speed, 0, max_fall);
+    ysp += fall_speed;
+}
+else
+{
+    fall_speed = 0;
+}
+
 // movement with tile collisions
 move_and_collide(xsp, ysp, tilemap);
 
@@ -27,7 +41,7 @@ if place_meeting(x,y,oCoin)
     room_goto_next();
 }
 
-// Animation of damage
+// Animation of damage (doesn't really work)
 if (damage_flash > 0)
 {
     damage_flash--;

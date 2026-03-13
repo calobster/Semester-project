@@ -6,13 +6,13 @@ if (keyboard_check_pressed(vk_escape)) {
 // Only allow menu control if paused
 if (paused) {
 
-    if (keyboard_check_pressed(vk_up)) {
-        menu_index--;
-    }
+    if (keyboard_check_pressed(ord("W"))) {
+    menu_index--;
+}
 
-    if (keyboard_check_pressed(vk_down)) {
-        menu_index++;
-    }
+if (keyboard_check_pressed(ord("S"))) {
+    menu_index++;
+}
 
     menu_index = clamp(menu_index, 0, array_length(menu_items) - 1);
 

@@ -3,14 +3,15 @@
   "%Name":"oSquid",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oSquid",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"damage","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"damage","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"distance_to_player","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"80",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"move_speed","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"hp","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy_Parent","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"propertyId":{"name":"hp","path":"objects/oEnemy_Parent/oEnemy_Parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
   ],
   "parent":{
     "name":"Objects",

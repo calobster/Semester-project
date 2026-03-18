@@ -1,7 +1,21 @@
-if (instance_exists(oPause) && oPause.paused) {
+// Pause check
+if (instance_exists(oPause) && oPause.paused) exit;
+
+
+// Combat cooldown timer
+if (combat_cooldown > 0) combat_cooldown--;
+
+
+// Apply knockback movement
+if (knockback_timer > 0)
+{
+    move_and_collide(knockback_x, knockback_y, tilemap);
+    knockback_timer--;
     exit;
 }
 
+
+// Movement input
 ysp = 0;
 xsp = 0;
 
@@ -11,7 +25,8 @@ var _v = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 xsp = _h * 3;
 ysp = _v * 3;
 
-// gravity when outside water
+
+// Gravity when outside water
 var in_water = place_meeting(x, y, oWater);
 
 if (!in_water)
@@ -25,24 +40,81 @@ else
     fall_speed = 0;
 }
 
-// movement with tile collisions
+
+// Apply movement with collisions
 move_and_collide(xsp, ysp, tilemap);
 
-// Sprite direction
+
+// Sprite facing direction
 var dir = sign(x - xprevious);
+if (dir != 0) image_xscale = dir;
 
-if (dir != 0) {
-    image_xscale = dir;
-}
 
-// Progress
-if place_meeting(x,y,oCoin)
+// Room progression
+if (place_meeting(x, y, oCoin))
 {
     room_goto_next();
 }
 
-// Animation of damage (doesn't really work)
+
+// Player damage flash handling
 if (damage_flash > 0)
 {
     damage_flash--;
+    if (damage_flash <= 0) image_blend = c_white;
 }
+
+
+// Combat detection
+var list = ds_list_create();
+var count = instance_place_list(x, y, oEnemy_Parent, list, false);
+
+for (var i = 0; i < count; i++)
+{
+    var enemy = list[| i];
+    if (!instance_exists(enemy)) continue;
+
+    // Resolve combat only if cooldowns are clear
+    if (combat_cooldown <= 0 && enemy.combat_cooldown <= 0)
+    {
+        // Player stronger → enemy knocked back
+        if (damage > enemy.damage)
+        {
+            enemy.hp -= damage;
+            enemy.damage_flash = 10;
+
+            var kdir = point_direction(x, y, enemy.x, enemy.y);
+            enemy.knockback_x = lengthdir_x(4, kdir);
+            enemy.knockback_y = lengthdir_y(4, kdir);
+            enemy.knockback_timer = 10;
+
+            combat_cooldown = 20;
+            enemy.combat_cooldown = 20;
+
+            if (enemy.hp <= 0)
+            {
+                damage += enemy.reward_damage;
+                instance_destroy(enemy);
+            }
+        }
+        // Enemy stronger → player knocked back
+        else if (damage < enemy.damage)
+        {
+            hp -= enemy.damage;
+            damage_flash = 10;
+            image_blend = c_red;
+
+            var kdir = point_direction(enemy.x, enemy.y, x, y);
+            knockback_x = lengthdir_x(4, kdir);
+            knockback_y = lengthdir_y(4, kdir);
+            knockback_timer = 10;
+
+            combat_cooldown = 20;
+            enemy.combat_cooldown = 20;
+
+            if (hp <= 0) room_restart();
+        }
+    }
+}
+
+ds_list_destroy(list);

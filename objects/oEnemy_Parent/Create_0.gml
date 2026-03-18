@@ -1,4 +1,10 @@
 target_x = x;
 target_y = y;
-
+size_rank = 1;   
+knockback_x = 0;
+knockback_y = 0;
+knockback_timer = 0;
+combat_cooldown = 0;
+damage_flash = 0;
+reward_damage = 1;
 tilemap = layer_tilemap_get_id("Tiles Background")

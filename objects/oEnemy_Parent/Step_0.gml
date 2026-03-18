@@ -2,6 +2,27 @@ if (instance_exists(oPause) && oPause.paused) {
     exit;
 }
 
+// Decrease cooldown
+if (combat_cooldown > 0) combat_cooldown--;
+
+// Apply knockback
+if (knockback_timer > 0)
+{
+    move_and_collide(knockback_x, knockback_y, tilemap);
+    knockback_timer--;
+    exit;
+}
+// Damage flash effect
+if (damage_flash > 0)
+{
+    damage_flash--;
+    image_blend = c_red;
+
+    if (damage_flash <= 0)
+    {
+        image_blend = c_white;
+    }
+}
 // Check distance every frame
 if (instance_exists(oPlayer) && distance_to_object(oPlayer) < distance_to_player)
 {

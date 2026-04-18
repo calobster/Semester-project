@@ -1,3 +1,12 @@
+if (tilemap == -1)
+{
+    var lay = layer_get_id("Tiles_Col");
+    if (lay != -1)
+    {
+        tilemap = layer_tilemap_get_id(lay);
+    }
+}
+
 if (instance_exists(oPause) && oPause.paused) {
     exit;
 }
@@ -24,11 +33,11 @@ if (damage_flash > 0)
     }
 }
 // Check distance every frame
-if (instance_exists(oPlayer) && distance_to_object(oPlayer) < distance_to_player)
+if (instance_exists(oPlayer1) && distance_to_object(oPlayer1) < distance_to_player)
 {
     // CHASE
-    target_x = oPlayer.x;
-    target_y = oPlayer.y;
+    target_x = oPlayer1.x;
+    target_y = oPlayer1.y;
 }
 else
 {

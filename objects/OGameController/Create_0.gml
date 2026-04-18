@@ -1,0 +1,1 @@
+instance_create_layer(x, y, layer, global.selected_player_object);

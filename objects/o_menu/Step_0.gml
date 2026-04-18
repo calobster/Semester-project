@@ -23,7 +23,7 @@ if(keyboard_check_pressed(confirmButt))
 {
 	if(selected == 0) // Play by default
 	{
-		room_goto_next()
+		room_goto(rPlayer_Select)
 	}
 else
 	if(selected == 1) // Options by default

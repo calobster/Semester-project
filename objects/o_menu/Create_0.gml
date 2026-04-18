@@ -45,6 +45,7 @@ gameTitle = "A Very Fishy Game";
 // Size of the title
 titleSize = 1.5;
 
+global.selected_player = -1;
 
 // Button to move up the menu
 upButt = ord("W");

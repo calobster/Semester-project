@@ -1,4 +1,4 @@
-var player = instance_find(oPlayer,0);
+var player = instance_find(oPlayer1,0);
 
 if (player != noone)
 {

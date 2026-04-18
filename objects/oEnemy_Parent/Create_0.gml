@@ -7,4 +7,4 @@ knockback_timer = 0;
 combat_cooldown = 0;
 damage_flash = 0;
 reward_damage = 1;
-tilemap = layer_tilemap_get_id("Tiles Background")
+tilemap = -1;

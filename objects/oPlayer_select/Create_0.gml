@@ -2,12 +2,12 @@ selection = 0;
 
 characters = [
     {
-        name : "Clown Fish",
+        name : "?",
         sprite : sPlayer1,
         object : oPlayer1
     },
     {
-        name : "Shark",
+        name : "Oxilotle",
         sprite : sPlayer2,
         object : oPlayer2
     }

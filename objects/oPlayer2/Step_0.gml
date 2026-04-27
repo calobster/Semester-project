@@ -1,10 +1,8 @@
 // Pause check
 if (instance_exists(oPause) && oPause.paused) exit;
 
-
 // Combat cooldown timer
 if (combat_cooldown > 0) combat_cooldown--;
-
 
 // Apply knockback movement
 if (knockback_timer > 0)
@@ -14,17 +12,15 @@ if (knockback_timer > 0)
     exit;
 }
 
-
 // Movement input
-ysp = 0;
 xsp = 0;
+ysp = 0;
 
 var _h = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _v = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
 xsp = _h * 3;
 ysp = _v * 3;
-
 
 // Gravity when outside water
 var in_water = place_meeting(x, y, oWater);
@@ -40,22 +36,18 @@ else
     fall_speed = 0;
 }
 
-
 // Apply movement with collisions
 move_and_collide(xsp, ysp, tilemap);
-
 
 // Sprite facing direction
 var dir = sign(x - xprevious);
 if (dir != 0) image_xscale = dir;
-
 
 // Room progression
 if (place_meeting(x, y, oCoin))
 {
     room_goto_next();
 }
-
 
 // Player damage flash handling
 if (damage_flash > 0)
@@ -64,17 +56,46 @@ if (damage_flash > 0)
     if (damage_flash <= 0) image_blend = c_white;
 }
 
-
-// Combat detection
+// Combat detection (body collision system)
 var list = ds_list_create();
-var count = instance_place_list(x, y, oEnemy_Parent, list, false);
+
+// Size of attack box
+var hit_w = 16;
+var hit_h = 16;
+
+// Position box in front of fish
+var hit_x1, hit_x2;
+
+if (image_xscale > 0) // facing right
+{
+    hit_x1 = bbox_right;
+    hit_x2 = bbox_right + hit_w;
+}
+else // facing left
+{
+    hit_x1 = bbox_left - hit_w;
+    hit_x2 = bbox_left;
+}
+
+var hit_y1 = y - hit_h/2;
+var hit_y2 = y + hit_h/2;
+
+// Collect enemies inside rectangle
+var count = collision_rectangle_list(
+    hit_x1, hit_y1,
+    hit_x2, hit_y2,
+    oEnemy_Parent,
+    false,
+    false,
+    list,
+    false
+);
 
 for (var i = 0; i < count; i++)
 {
     var enemy = list[| i];
     if (!instance_exists(enemy)) continue;
 
-    // Resolve combat only if cooldowns are clear
     if (combat_cooldown <= 0 && enemy.combat_cooldown <= 0)
     {
         // Player stronger → enemy knocked back
@@ -113,6 +134,26 @@ for (var i = 0; i < count; i++)
             enemy.combat_cooldown = 20;
 
             if (hp <= 0) room_restart();
+        }
+        // Equal damage → both knock back
+        else
+        {
+            hp -= enemy.damage;
+            enemy.hp -= damage;
+
+            var dir1 = point_direction(enemy.x, enemy.y, x, y);
+            var dir2 = point_direction(x, y, enemy.x, enemy.y);
+
+            knockback_x = lengthdir_x(3, dir1);
+            knockback_y = lengthdir_y(3, dir1);
+            knockback_timer = 8;
+
+            enemy.knockback_x = lengthdir_x(3, dir2);
+            enemy.knockback_y = lengthdir_y(3, dir2);
+            enemy.knockback_timer = 8;
+
+            combat_cooldown = 20;
+            enemy.combat_cooldown = 20;
         }
     }
 }

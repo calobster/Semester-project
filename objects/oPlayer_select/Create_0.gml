@@ -2,7 +2,7 @@ selection = 0;
 
 characters = [
     {
-        name : "?",
+        name : "Sturgeon",
         sprite : sPlayer1,
         object : oPlayer1
     },

@@ -17,3 +17,6 @@ knockback_x = 0;
 knockback_y = 0;
 knockback_timer = 0;
 combat_cooldown = 0;
+parry_timer = 0;
+parry_duration = 15;
+is_parrying = false;

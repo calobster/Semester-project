@@ -16,6 +16,7 @@
     {"name":"oGuppy","order":11,"path":"objects/oGuppy/oGuppy.yy",},
     {"name":"oHealth_Bar","order":9,"path":"objects/oHealth_Bar/oHealth_Bar.yy",},
     {"name":"oOptions","order":7,"path":"objects/oOptions/oOptions.yy",},
+    {"name":"oParryTrail","order":19,"path":"objects/oParryTrail/oParryTrail.yy",},
     {"name":"oPause","order":8,"path":"objects/oPause/oPause.yy",},
     {"name":"oPlayer_Select","order":12,"path":"objects/oPlayer_Select/oPlayer_Select.yy",},
     {"name":"oPlayer2","order":14,"path":"objects/oPlayer2/oPlayer2.yy",},

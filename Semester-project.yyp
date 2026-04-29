@@ -35,6 +35,7 @@
     {"id":{"name":"oGuppy","path":"objects/oGuppy/oGuppy.yy",},},
     {"id":{"name":"oHealth_Bar","path":"objects/oHealth_Bar/oHealth_Bar.yy",},},
     {"id":{"name":"oOptions","path":"objects/oOptions/oOptions.yy",},},
+    {"id":{"name":"oParryTrail","path":"objects/oParryTrail/oParryTrail.yy",},},
     {"id":{"name":"oPause","path":"objects/oPause/oPause.yy",},},
     {"id":{"name":"oPlayer_Select","path":"objects/oPlayer_Select/oPlayer_Select.yy",},},
     {"id":{"name":"oPlayer1","path":"objects/oPlayer1/oPlayer1.yy",},},
@@ -77,8 +78,8 @@
     {"roomId":{"name":"rPlayer_Select","path":"rooms/rPlayer_Select/rPlayer_Select.yy",},},
     {"roomId":{"name":"rGame1","path":"rooms/rGame1/rGame1.yy",},},
     {"roomId":{"name":"rGame2","path":"rooms/rGame2/rGame2.yy",},},
-    {"roomId":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},},
     {"roomId":{"name":"rGame3","path":"rooms/rGame3/rGame3.yy",},},
+    {"roomId":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

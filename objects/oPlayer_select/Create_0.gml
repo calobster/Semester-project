@@ -7,7 +7,7 @@ characters = [
         object : oPlayer1
     },
     {
-        name : "Oxilotle",
+        name : "Oxolotl",
         sprite : sPlayer2,
         object : oPlayer2
     }

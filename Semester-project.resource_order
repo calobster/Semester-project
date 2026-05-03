@@ -22,6 +22,7 @@
     {"name":"oPlayer2","order":14,"path":"objects/oPlayer2/oPlayer2.yy",},
     {"name":"oPuffer","order":15,"path":"objects/oPuffer/oPuffer.yy",},
     {"name":"oSquid","order":3,"path":"objects/oSquid/oSquid.yy",},
+    {"name":"oSquid1","order":20,"path":"objects/oSquid1/oSquid1.yy",},
     {"name":"oWater_Scroll","order":17,"path":"objects/oWater_Scroll/oWater_Scroll.yy",},
     {"name":"oWater","order":10,"path":"objects/oWater/oWater.yy",},
     {"name":"rGame1","order":1,"path":"rooms/rGame1/rGame1.yy",},

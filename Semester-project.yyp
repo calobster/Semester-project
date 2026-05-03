@@ -42,6 +42,7 @@
     {"id":{"name":"oPlayer2","path":"objects/oPlayer2/oPlayer2.yy",},},
     {"id":{"name":"oPuffer","path":"objects/oPuffer/oPuffer.yy",},},
     {"id":{"name":"oSquid","path":"objects/oSquid/oSquid.yy",},},
+    {"id":{"name":"oSquid1","path":"objects/oSquid1/oSquid1.yy",},},
     {"id":{"name":"oWater_Scroll","path":"objects/oWater_Scroll/oWater_Scroll.yy",},},
     {"id":{"name":"oWater","path":"objects/oWater/oWater.yy",},},
     {"id":{"name":"rGame1","path":"rooms/rGame1/rGame1.yy",},},

@@ -8,24 +8,36 @@ if (attack_hitpause > 0)
     exit;
 }
 
+// Movement input
+var _h = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+var _v = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+
 // Parry start
 if (keyboard_check_pressed(ord("K")) && parry_timer <= 0)
 {
     parry_timer = parry_duration;
     is_parrying = true;
     image_xscale *= -1;
+
+    var tail_offset = -60 * image_xscale;
+    var t = instance_create_layer(x + tail_offset, y, "Instances", oParryTrail);
+    t.direction_flip = image_xscale;
 }
 
 // Cooldowns
 if (combat_cooldown > 0) combat_cooldown--;
+if (attack_timer > 0) attack_timer--;
+else is_attacking = false;
 
-if (attack_timer > 0)
+// Parry timer
+if (parry_timer > 0)
 {
-    attack_timer--;
-}
-else
-{
-    is_attacking = false;
+    parry_timer--;
+    if (parry_timer <= 0)
+    {
+        is_parrying = false;
+        image_xscale *= -1;
+    }
 }
 
 // Knockback movement
@@ -36,13 +48,7 @@ if (knockback_timer > 0)
     exit;
 }
 
-// Movement input
-xsp = 0;
-ysp = 0;
-
-var _h = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _v = keyboard_check(ord("S")) - keyboard_check(ord("W"));
-
+// Movement
 xsp = _h * 3;
 ysp = _v * 3;
 
@@ -70,8 +76,8 @@ if (current != noone)
 // Apply movement
 move_and_collide(xsp, ysp, tilemap);
 
-// Face direction
-if (_h != 0)
+// Face direction (not during parry)
+if (_h != 0 && !is_parrying)
 {
     image_xscale = sign(_h);
 }
@@ -87,18 +93,6 @@ if (damage_flash > 0)
 {
     damage_flash--;
     if (damage_flash <= 0) image_blend = c_white;
-}
-
-// Parry timer
-if (parry_timer > 0)
-{
-    parry_timer--;
-
-    if (parry_timer <= 0)
-    {
-        is_parrying = false;
-        image_xscale *= -1;
-    }
 }
 
 // Combat detection
@@ -148,20 +142,14 @@ for (var i = 0; i < count; i++)
 
             var atk_dir = point_direction(x, y, enemy.x, enemy.y);
 
-            // Lunge
             x += lengthdir_x(4, atk_dir);
             y += lengthdir_y(4, atk_dir);
 
-            // Stronger knockback
             enemy.knockback_x = lengthdir_x(10, atk_dir);
             enemy.knockback_y = lengthdir_y(10, atk_dir);
             enemy.knockback_timer = 12;
 
-            // Longer hit pause
             attack_hitpause = 5;
-
-            is_attacking = true;
-            attack_timer = 8;
 
             combat_cooldown = 20;
             enemy.combat_cooldown = 20;
@@ -176,21 +164,23 @@ for (var i = 0; i < count; i++)
                 instance_destroy(enemy);
             }
         }
+
         // ENEMY STRONGER
-        else if (damage < enemy.damage)
+        else
         {
             if (is_parrying)
             {
                 enemy.hp -= enemy.damage;
                 enemy.damage_flash = 10;
 
-                var kdir = point_direction(x, y, enemy.x, enemy.y);
+                var atk_dir = point_direction(x, y, enemy.x, enemy.y);
 
-                enemy.knockback_x = lengthdir_x(10, kdir);
-                enemy.knockback_y = lengthdir_y(10, kdir);
+                enemy.knockback_x = lengthdir_x(12, atk_dir);
+                enemy.knockback_y = lengthdir_y(12, atk_dir);
                 enemy.knockback_timer = 14;
 
-                attack_hitpause = 6;
+                combat_cooldown = 20;
+                enemy.combat_cooldown = 20;
 
                 if (enemy.hp <= 0)
                 {
@@ -201,9 +191,6 @@ for (var i = 0; i < count; i++)
 
                     instance_destroy(enemy);
                 }
-
-                combat_cooldown = 20;
-                enemy.combat_cooldown = 20;
             }
             else
             {
@@ -211,46 +198,14 @@ for (var i = 0; i < count; i++)
                 damage_flash = 10;
                 image_blend = c_red;
 
-                var kdir = point_direction(enemy.x, enemy.y, x, y);
+                var hit_dir = point_direction(enemy.x, enemy.y, x, y);
 
-                knockback_x = lengthdir_x(4, kdir);
-                knockback_y = lengthdir_y(4, kdir);
-                knockback_timer = 10;
+                knockback_x = lengthdir_x(10, hit_dir);
+                knockback_y = lengthdir_y(10, hit_dir);
+                knockback_timer = 12;
 
                 combat_cooldown = 20;
                 enemy.combat_cooldown = 20;
-            }
-        }
-        // EQUAL DAMAGE
-        else
-        {
-            hp -= enemy.damage;
-            enemy.hp -= damage;
-
-            var dir1 = point_direction(enemy.x, enemy.y, x, y);
-            var dir2 = point_direction(x, y, enemy.x, enemy.y);
-
-            knockback_x = lengthdir_x(4, dir1);
-            knockback_y = lengthdir_y(4, dir1);
-            knockback_timer = 8;
-
-            enemy.knockback_x = lengthdir_x(8, dir2);
-            enemy.knockback_y = lengthdir_y(8, dir2);
-            enemy.knockback_timer = 12;
-
-            attack_hitpause = 5;
-
-            combat_cooldown = 20;
-            enemy.combat_cooldown = 20;
-
-            if (enemy.hp <= 0)
-            {
-                part_particles_create(global.ps, enemy.x, enemy.y, global.pt_bubble, 3);
-
-                global.player_damage += enemy.reward_damage;
-                damage = global.player_damage;
-
-                instance_destroy(enemy);
             }
         }
     }

@@ -1,6 +1,6 @@
 // Pause
 if (instance_exists(oPause) && oPause.paused) exit;
-
+if (variable_global_exists("qte_active") && global.qte_active) exit;
 // Hit pause
 if (attack_hitpause > 0)
 {

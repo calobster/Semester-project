@@ -1,3 +1,7 @@
+
+global.qte_active = false;
+global.qte_player = noone;
+global.qte_hook = noone;
 global.player_damage = 1;
 instance_create_layer(x, y, layer, global.selected_player_object);
 // Create particle system

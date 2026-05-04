@@ -8,7 +8,7 @@ if (tilemap == -1)
 
 // Pause
 if (instance_exists(oPause) && oPause.paused) exit;
-
+if (variable_global_exists("qte_active") && global.qte_active) exit;
 // Cooldowns
 if (combat_cooldown > 0) combat_cooldown--;
 

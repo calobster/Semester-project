@@ -42,7 +42,7 @@ draw_set_color(c_white);
 draw_text_transformed(cx, cy - 130, "VICTORY", 3, 3, 0);
 
 draw_set_alpha(0.7);
-draw_text(cx, cy - 70, "The river is safe... for now.");
+draw_text(cx, cy - 70, "You Escaped!! ... for now.");
 draw_set_alpha(1);
 
 // Menu styling

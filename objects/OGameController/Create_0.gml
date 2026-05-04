@@ -16,13 +16,23 @@ part_type_direction(global.pt_bubble, 85, 95, 0, 0);
 part_type_life(global.pt_bubble, 15, 25);
 part_type_gravity(global.pt_bubble, -0.01, 90);
 
+message_timer = 0;
+
 if (room == rGame1)
 {
     message_text = "Eat to get stronger. Escape to the river through the window!";
     message_timer = room_speed * 7;
     message_alpha = 1;
 }
-else
+else if (room == rGame2)
 {
-    message_timer = 0;
+    message_text = "Get Past Past! Reach The Ocean!!!";
+    message_timer = room_speed * 7;
+    message_alpha = 1;
+}
+else if (room == rGame3)
+{
+    message_text = "K to Parry! Send The Missles Back!!";
+    message_timer = room_speed * 7;
+    message_alpha = 1;
 }

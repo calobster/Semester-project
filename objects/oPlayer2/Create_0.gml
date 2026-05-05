@@ -31,7 +31,7 @@ attack_hitpause = 0;
 
 is_attacking = false;
 attack_timer = 0;
-
+shock_timer = 0; 
 if (!variable_global_exists("player_damage"))
 {
     global.player_damage = 1;

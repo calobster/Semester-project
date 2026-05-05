@@ -1,6 +1,14 @@
-// Pause
+// Pause / QTE
 if (instance_exists(oPause) && oPause.paused) exit;
 if (variable_global_exists("qte_active") && global.qte_active) exit;
+
+// Shock freeze
+if (shock_timer > 0)
+{
+    shock_timer--;
+    exit;
+}
+
 // Hit pause
 if (attack_hitpause > 0)
 {
@@ -137,6 +145,10 @@ for (var i = 0; i < count; i++)
         // PLAYER STRONGER
         if (damage > enemy.damage)
         {
+            // Can't damage invulnerable enemies (eel shock window)
+            if (variable_instance_exists(enemy, "invuln_timer") && enemy.invuln_timer > 0)
+                continue;
+
             enemy.hp -= damage;
             enemy.damage_flash = 10;
 
@@ -160,12 +172,11 @@ for (var i = 0; i < count; i++)
 
                 global.player_damage += enemy.reward_damage;
                 damage = global.player_damage;
-
+				run_add_kill();
                 instance_destroy(enemy);
             }
         }
-
-        // ENEMY STRONGER
+        // ENEMY STRONGER OR EQUAL
         else
         {
             if (is_parrying)
@@ -188,7 +199,7 @@ for (var i = 0; i < count; i++)
 
                     global.player_damage += enemy.reward_damage;
                     damage = global.player_damage;
-
+					run_add_kill();
                     instance_destroy(enemy);
                 }
             }

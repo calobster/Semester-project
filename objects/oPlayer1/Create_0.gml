@@ -31,6 +31,7 @@ attack_hitpause = 0;
 
 is_attacking = false;
 attack_timer = 0;
+shock_timer = 0;      // freezes player + shows shock overlay
 
 if (!variable_global_exists("player_damage"))
 {

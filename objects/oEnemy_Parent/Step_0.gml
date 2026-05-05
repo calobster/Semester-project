@@ -9,6 +9,15 @@ if (tilemap == -1)
 // Pause
 if (instance_exists(oPause) && oPause.paused) exit;
 if (variable_global_exists("qte_active") && global.qte_active) exit;
+
+// Freeze enemies if either player is shocked
+var p = instance_find(oPlayer1, 0);
+if (p == noone) p = instance_find(oPlayer2, 0);
+
+if (p != noone && variable_instance_exists(p, "shock_timer") && p.shock_timer > 0)
+{
+    exit;
+}
 // Cooldowns
 if (combat_cooldown > 0) combat_cooldown--;
 
@@ -20,6 +29,19 @@ if (knockback_timer > 0)
     exit;
 }
 
+// Stun / immune timers
+if (stun_timer > 0)
+{
+    stun_timer--;
+    exit; // stops movement completely
+}
+
+if (invuln_timer > 0)
+{
+    invuln_timer--;
+}
+
+
 // Damage flash
 if (damage_flash > 0)
 {
@@ -28,20 +50,26 @@ if (damage_flash > 0)
     if (damage_flash <= 0) image_blend = c_white;
 }
 
-// Find player
+// Ensure chase_enabled exists (default = true)
+if (!variable_instance_exists(id, "chase_enabled"))
+{
+    chase_enabled = true;
+}
+
+// Find player (for possible chase)
 var player = instance_find(oPlayer1, 0);
 if (player == noone) player = instance_find(oPlayer2, 0);
 
-// Detection
-if (player != noone)
+// If chase is enabled, update chase_timer when player is near
+if (chase_enabled && player != noone)
 {
     var dist = point_distance(x, y, player.x, player.y);
     if (dist < distance_to_player)
         chase_timer = chase_duration;
 }
 
-// Chase or wander
-if (chase_timer > 0 && player != noone)
+// Decide behavior: chase OR wander
+if (chase_enabled && chase_timer > 0 && player != noone)
 {
     chase_timer--;
     target_x = player.x;
@@ -52,6 +80,7 @@ else
 {
     move_speed = base_speed;
 
+    // Wander target refresh
     if (point_distance(x, y, target_x, target_y) < 4)
     {
         target_x = random_range(xstart - 100, xstart + 100);
@@ -59,7 +88,7 @@ else
     }
 }
 
-// Movement
+// Movement toward target
 var dir = point_direction(x, y, target_x, target_y);
 var move_x = lengthdir_x(move_speed, dir);
 var move_y = lengthdir_y(move_speed, dir);

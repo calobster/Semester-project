@@ -1,0 +1,1 @@
+hook = instance_find(oFishHook, 0); 

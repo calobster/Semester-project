@@ -55,8 +55,33 @@ if (fire_cooldown <= 0)
 }
 
 // Trigger death state
-if (hp <= 0)
+if (hp <= 0 && !dying)
 {
+    run_finish(); // record run time + kills
+
     dying = true;
     death_timer = room_speed * 4;
+}
+// Contact damage (hurt + push left)
+var p = instance_place(x, y, oPlayer1);
+if (p == noone) p = instance_place(x, y, oPlayer2);
+
+if (p != noone)
+{
+    if (!variable_instance_exists(p, "boss_touch_cd")) p.boss_touch_cd = 0;
+    if (p.boss_touch_cd > 0) p.boss_touch_cd--;
+
+    if (p.boss_touch_cd <= 0)
+    {
+        p.hp -= 2;
+        p.damage_flash = 10;
+        p.image_blend = c_red;
+
+        // force knockback left
+        p.knockback_x = -14;
+        p.knockback_y = 0;
+        p.knockback_timer = 12;
+
+        p.boss_touch_cd = room_speed; // 1 second
+    }
 }

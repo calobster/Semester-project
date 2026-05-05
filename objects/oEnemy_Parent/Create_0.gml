@@ -16,3 +16,6 @@ chase_duration = 60;        // how long they chase after losing sight
 base_speed = .6;             // normal speed
 chase_speed = 1;          // boosted speed
 move_speed = base_speed;
+chase_enabled = true;
+stun_timer = 0;       // stops movement temporarily
+invuln_timer = 0;     // cannot be damaged temporarily

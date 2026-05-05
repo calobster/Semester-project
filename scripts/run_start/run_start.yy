@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"run_start",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"run_start",
+  "parent":{
+    "name":"Semester-project",
+    "path":"Semester-project.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -8,7 +8,6 @@ if (slider >= bar_h) { slider = bar_h; slider_dir = -1; }
 timer--;
 if (timer <= 0)
 {
-    // FAIL
     qte_fail();
 }
 
@@ -25,10 +24,10 @@ function qte_success()
 {
     global.qte_active = false;
 
-    // Make the hook retract (so you "escape")
+    // Destroy the hook after QTE
     if (instance_exists(global.qte_hook))
     {
-        global.qte_hook.state = "up";
+        instance_destroy(global.qte_hook);
     }
 
     // Clear references
@@ -43,12 +42,18 @@ function qte_fail()
     // Damage player
     if (instance_exists(global.qte_player))
     {
-        global.qte_player.hp -= 2;              // change damage amount
+        global.qte_player.hp -= 2;
         global.qte_player.damage_flash = 10;
         global.qte_player.image_blend = c_red;
     }
 
     global.qte_active = false;
+
+    // Destroy the hook after QTE
+    if (instance_exists(global.qte_hook))
+    {
+        instance_destroy(global.qte_hook);
+    }
 
     // Clear references
     global.qte_player = noone;

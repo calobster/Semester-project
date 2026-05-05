@@ -17,3 +17,4 @@ fire_cooldown = fire_cooldown_max;
 damage_flash = 0;
 dying = false;
 death_timer = 0;
+boss_touch_cd = 0;

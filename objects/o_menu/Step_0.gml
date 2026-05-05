@@ -23,6 +23,7 @@ if(keyboard_check_pressed(confirmButt))
 {
 	if(selected == 0) // Play by default
 	{
+		run_start();
 		room_goto(rPlayer_Select)
 	}
 else
@@ -33,7 +34,7 @@ else
 	
 	if(selected == 2) // Stats by default
 	{
-		room_goto(rMenu)
+		room_goto(rStats)
 	}
 	
 	if(selected == 3) // Exit by default

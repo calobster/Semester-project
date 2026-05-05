@@ -33,25 +33,26 @@ else
 }
 
 // Fire timer
+// Counts down every frame
 fire_cooldown--;
 
+// When cooldown reaches 0, shoot a torpedo
 if (fire_cooldown <= 0)
 {
-    if (instance_number(oTorpedo) == 0)
+    var n = instance_number(oTorpedoSpawn);
+
+    if (n > 0)
     {
-        var n = instance_number(oTorpedoSpawn);
+        // Pick a random torpedo spawn point
+        var sp = instance_find(oTorpedoSpawn, irandom(n - 1));
 
-        if (n > 0)
-        {
-            var sp = instance_find(oTorpedoSpawn, irandom(n - 1));
-
-            // spawn on Projectiles layer (must exist in room)
-            var t = instance_create_layer(sp.x, sp.y, "Projectiles", oTorpedo);
-            t.owner = id;
-        }
+        // Spawn torpedo on Projectiles layer
+        var t = instance_create_layer(sp.x, sp.y, "Projectiles", oTorpedo);
+        t.owner = id;
     }
 
-    fire_cooldown = fire_cooldown_max;
+    // Reset cooldown to 3 seconds
+    fire_cooldown = room_speed * 3;
 }
 
 // Trigger death state

@@ -12,7 +12,7 @@ tube_offset_y = 0;
 
 // Optional: lock to right side if you want it auto-placed
 // x = room_width - 200;
-fire_cooldown_max = room_speed * 1; // 10 seconds
+fire_cooldown_max = room_speed * 3; // 10 seconds
 fire_cooldown = fire_cooldown_max;
 damage_flash = 0;
 dying = false;
